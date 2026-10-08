@@ -257,7 +257,10 @@ class TuyaLocalPlatform {
             !characteristic.props ||
             !Array.isArray(characteristic.props.perms) ||
             characteristic.props.perms.length !== 3 ||
-            !(characteristic.props.perms.includes(Perms.WRITE) && characteristic.props.perms.includes(Perms.NOTIFY))
+            !(
+              characteristic.props.perms.includes(Perms.PAIRED_WRITE) &&
+              characteristic.props.perms.includes(Perms.NOTIFY)
+            )
           )
             return
 

@@ -109,7 +109,7 @@ describe('Platform Registration', () => {
       hap: {
         Characteristic: MockCharacteristic,
         Formats: { FLOAT: 'float', STRING: 'string', BOOL: 'bool' },
-        Perms: { WRITE: 'pw', NOTIFY: 'ev', READ: 'pr', PAIRED_READ: 'pr' },
+        Perms: { PAIRED_READ: 'pr', PAIRED_WRITE: 'pw', NOTIFY: 'ev' },
         Service: {
           AccessoryInformation: { UUID: 'AccessoryInformation' },
         },
